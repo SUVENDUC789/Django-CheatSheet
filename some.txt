@@ -5,3 +5,8 @@ py manage.py makemigrations
 py manage.py sqlmigrate APPNAME INITIALNUMBER
 
 py manage.py migrate
+
+
+py manage.py runserver
+
+py manage.py createsuperuser

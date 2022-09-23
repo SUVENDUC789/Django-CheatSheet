@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top {{bilname|length}} BILLIONAIRES</title>
+</head>
+
+<body>
+    <center>
+        <table border="5px">
+            <caption><h1>Top {{bilname|length}} BILLIONAIRES</h1></caption>
+            <thead>
+                <tr>
+                    {% comment %} <th>Image</th> {% endcomment %}
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>NET WORTH</th>
+                    <th>AGE</th>
+                    <th>SOURCE</th>
+                    <th>COUNTRY/TERRITORY</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% comment %} {{bilname}} {% endcomment %}
+                {% for s in bilname %}
+                <tr>
+                    {% comment %} <td>{{s.bimg}}</td> {% endcomment %}
+                    <td>{{forloop.counter}}</td>
+                    <td>{{s.bname|capfirst}}</td>
+                    <td>{{s.bnetworth}}</td>
+                    <td>{{s.bage}}</td>
+                    <td>{{s.bsource|capfirst}}</td>
+                    <td>{{s.bcountry|upper}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </center>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <style>
+        body{background-color:black;
+        color:seashell;
+        }
+        h2{
+            color:red;
+        }
+        table{
+            color: aqua;
+        }
+    </style>
+</head>
+<body >
+    <table border="5px solid">
+        <thead>
+            <tr>
+                <th>SL</th>
+                <th>Name</th>
+                <th>Roll</th>
+                <th>Programming language</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for key,val in data.items %}
+            
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{val.name|capfirst}}</td>
+                <td>{{val.roll|capfirst}}</td>
+                <td>{{val.lang|upper}}</td>
+            </tr>            
+            {% endfor %}
+        </tbody>
+    </table>
+    <hr>
+    <h1>Dynamic Template Files (DTL)</h1>
+    <p><i>Creater</i> : <b>{{Creater}}</b> </p>
+    <p><i>FrameWrok</i> : <b>{{FrameWrok|capfirst}}</b> </p>
+    <p><i>Programming language</i> : <b>{{langu|capfirst}}</b> </p>
+    <p><i>Html emmet</i> : <b>{{text|upper|truncatewords:2}}</b></p>
+    <p><i>Lorem-emmet-Length</i> : <b>{{text|length}}</b></p>
+    <p><i>Html emmet</i> : <b>{{text2|lower|truncatechars:10}}</b></p>
+    <p><i>Admin</i> : <b>{{Admin|default:'Guest'|capfirst}}</b></p>
+    <hr>
+    <h2>DTL-Day filter</h2>
+    {% load static %}
+    <img src="/static/1.png" alt="1.png"  width="900px">
+    <hr>
+    <h2>DTL-Week filter</h2>
+    {% load static %}
+    <img src="/static/2.png" alt="1.png" width="900px">
+    <hr>
+    <h2>DTL-Month filter</h2>
+    {% load static %}
+    <img src="/static/3.png" alt="1.png" width="900px">
+    <hr>
+    <hr>
+    <h2>DTL-Year filter</h2>
+    {% load static %}
+    <img src="/static/4.png" alt="1.png" width="900px">
+    <hr>
+    <hr>
+    <h2>DTL-Time filter</h2>
+    {% load static %}
+    <img src="/static/5.png" alt="1.png" width="900px">
+    <hr>
+    <h2>Django Expert are :</h2>
+    <ul>
+
+        {% for i in friends %}
+        
+        <li>{{i}}</li>
+        
+        {% endfor %}
+    </ul>
+    <hr>
+    <h2>DTL-Predefine For-loop </h2>
+    {% load static %}
+    <img src="/static/for.png" alt="1.png" width="900px">
+    <hr>
+    
+</body>
+</html>

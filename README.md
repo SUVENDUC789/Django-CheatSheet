@@ -10,7 +10,7 @@ py manage.py runserver
 
 ### **Run local server with another PORT**
 ```terminal
-py manage.py runserver
+py manage.py runserver 4444
 ```
 
 ### 2.Create Django App:

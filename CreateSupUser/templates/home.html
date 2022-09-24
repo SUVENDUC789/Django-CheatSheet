@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django-form-Api</title>
+</head>
+<body>
+    <ol>
+
+        <li><h1>Django form api</h1>
+            <form action="" method="get">
+                <table>
+                    {{form}}
+                </table>
+                <input type="submit" value="submit">
+            </form></li>
+        <hr>
+        <li>
+            <h1>Django form api with out table tag</h1>
+        <form action="" method="get">
+                {{form}}
+            <input type="submit" value="submit">
+        </form>
+        <hr>
+        </li>
+        <li>
+            <h1>Django form api with &lt;p&gt; tag</h1>
+        <form action="" method="get">
+                {{form.as_p}}
+            <input type="submit" value="submit">
+        </form>
+        <hr>
+        </li>
+        <li>
+            <h1>Django form api with &lt;ul&gt; tag</h1>
+        <form action="" method="get">
+                {{form.as_ul}}
+            <input type="submit" value="submit">
+        </form>
+        <hr>
+        </li>
+        <li>
+            <h1>Django form api direct access</h1>
+        <form action="" method="get">
+                {{form.name}}
+                {{form.email}}
+                {{form.dob}}
+            <input type="submit" value="submit">
+        </form>
+        <hr>
+        </li>
+    </ol>
+</body>
+</html>

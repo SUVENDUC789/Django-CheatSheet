@@ -14,6 +14,8 @@ def home(request):
             print("Name : ",f.cleaned_data['name'])
             print("Email : ",f.cleaned_data['email'])
             print("Password : ",f.cleaned_data['password'])
+            print("Agree : ",f.cleaned_data['agree'])
+            print("Agree : ",f.cleaned_data['age'])
             # return render(request,'submit.html',{'name':f.cleaned_data['name']})
             return HttpResponseRedirect("/submit/")
     else:

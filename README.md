@@ -137,7 +137,7 @@ def home(request):
 
 ```
 
-```
+
 ### **How to style form in django**
 ```html
 

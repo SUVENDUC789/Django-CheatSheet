@@ -136,3 +136,44 @@ def home(request):
 </html>
 
 ```
+
+```
+### **How to style form in django**
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Django Form Errors and Field Error in Django</title>
+    <style>
+        .errorlist{
+            list-style-type:none ;
+            color: red;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Styling Django Form Errors and Field Error in Django</h1>
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+        {{form.non_field_errors}}
+        {% for field in form %}
+        <div>
+            {{field.label_tag}} {{field}} 
+            {% for error in field.errors %}
+            <p class="errorlist">{{error|striptags}}</p>
+            {% endfor %}
+        </div>
+        {% endfor %}
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
+
+```

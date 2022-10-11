@@ -70,6 +70,10 @@ py manage.py makemigrations
 ```terminal
 py manage.py migrate
 ```
+### 10.After run this command create super user :
+```terminal
+py manage.py createsuperuser
+```
 ### **Create forms.py file**
 ### And write some code:
 ```python
